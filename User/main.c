@@ -43,7 +43,7 @@ int main(void)
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
     SystemCoreClockUpdate();
 	Delay_Init();
-    USARTx_Init();
+    USARTx_Init();  
 
     LCD_Reset_GPIO_Init();
     //LCD reset
