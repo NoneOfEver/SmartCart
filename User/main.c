@@ -24,7 +24,7 @@
 #include"ctype.h"
 #include <Key_Get.h>
 #include "structures.h"
-#include "allshow.h"
+#include "allshow.h" 
 #define test
 #define GapValue 270
 float   BiaoDing=500.7;       //标定系数,根据自己的传感器调节
