@@ -44,7 +44,7 @@ int main(void)
     SystemCoreClockUpdate();
 	Delay_Init();
     USARTx_Init();  
-
+         
     LCD_Reset_GPIO_Init();
     //LCD reset
 
