@@ -1,10 +1,10 @@
 /*
  * L610.c
  *
- *      Created on      :2024Äê3ÔÂ22ÈÕ
- *      Author          :ÅË²´Ãû
+ *      Created on      :2024å¹´3æœˆ22æ—¥
+ *      Author          :æ½˜æ³Šå
  *      Version         :V1.0
- *      Description     :FibocomL610½Ó¿Ú¿â
+ *      Description     :FibocomL610æ¥å£åº“
  *
  *
  *
@@ -24,119 +24,119 @@ int number;
 
 
 /*
- * @brief:FibocomL610Ä£¿é³õÊ¼»¯
+ * @brief:FibocomL610æ¨¡å—åˆå§‹åŒ–
  * @param:null
  * @return:null
  */
 void L610_Init()
 {
-    printf("Ä£¿é³õÊ¼»¯\r\n");
+    printf("æ¨¡å—åˆå§‹åŒ–\r\n");
 
     printf("AT\r\n");
     Delay_Ms(1000);
 }
 
 /*
- * @brief:²éÑ¯FibocomL610
+ * @brief:æŸ¥è¯¢FibocomL610
  * @param:null
  * @return:null
  */
 void L610_Lookup()
 {
-    //²éÑ¯°æ±¾ĞÅÏ¢
+    //æŸ¥è¯¢ç‰ˆæœ¬ä¿¡æ¯
 //    printf("ATI\r\n");
 //    Delay_Ms(1000);
 //    strx=strstr((const char*)USART_Rbuffer,(const char*)"Fibocom");
 //    while(strx==NULL)
 //    {
-//       printf("²éÑ¯ĞÅÏ¢Ê§°Ü\n");
+//       printf("æŸ¥è¯¢ä¿¡æ¯å¤±è´¥\n");
 //       Delay_Ms(1000);
 //       USART_Rbuffer_Num = 0;
 //       printf("ATI\r\n");
 //       Delay_Ms(1000);
 //       strx=strstr((const char*)USART_Rbuffer,(const char*)"Fibocom");
 //    }
-//    printf("°æ±¾ĞÅÏ¢ÕıÈ·\n");
+//    printf("ç‰ˆæœ¬ä¿¡æ¯æ­£ç¡®\n");
 //    Delay_Ms(1000);
 
-    //²éÑ¯PS×¢²áÇé¿ö
+    //æŸ¥è¯¢PSæ³¨å†Œæƒ…å†µ
     printf("AT+CGREG?\r\n");
     Delay_Ms(1000);
     strx=strstr((const char*)USART_Rbuffer,(const char*)"+CGREG: 0,1");
     while(strx==NULL)
     {
-       printf("PS×¢²áÎŞĞ§\n");
+       printf("PSæ³¨å†Œæ— æ•ˆ\n");
        USART_Rbuffer_Num = 0;
        printf("AT+CGREG?\r\n");
        Delay_Ms(1000);
        strx=strstr((const char*)USART_Rbuffer,(const char*)"+CGREG: 0,1");
        printf("%s",(char*)USART_Rbuffer);
     }
-    printf("PS×¢²áÓĞĞ§\n");
+    printf("PSæ³¨å†Œæœ‰æ•ˆ\n");
     Delay_Ms(1000);
     //printf("%s",(char*)USART_Rbuffer);
 
 }
 
 /*
- * @brief:FibocomL610ÉêÇëIP
+ * @brief:FibocomL610ç”³è¯·IP
  * @param:null
  * @return:null
  */
 void L610_RequestIP()
 {
-    //ÇëÇóIP
+    //è¯·æ±‚IP
     printf("AT+MIPCALL?\r\n");
     Delay_Ms(50);
     strx=strstr((const char*)USART_Rbuffer,(const char*)"+MIPCALL: 1");
     while(strx==NULL)
     {
-       printf("»¹Î´»ñÈ¡µ½IP\n");
+       printf("è¿˜æœªè·å–åˆ°IP\n");
        Delay_Ms(2000);
        USART_Rbuffer_Num = 0;
        printf("AT+MIPCALL=1\r\n");
        Delay_Ms(2000);
        strx=strstr((const char*)USART_Rbuffer,(const char*)"+MIPCALL: 1");
     }
-    printf("»ñÈ¡IP³É¹¦\n");
+    printf("è·å–IPæˆåŠŸ\n");
     Delay_Ms(1000);
 
 }
 
 /*
- * @brief:FibocomL610ÉèÖÃÆ½Ì¨ĞÅÏ¢£¬ÉèÖÃÁ¬½Ó²ÎÊı,²¢Á¬½Ó
+ * @brief:FibocomL610è®¾ç½®å¹³å°ä¿¡æ¯ï¼Œè®¾ç½®è¿æ¥å‚æ•°,å¹¶è¿æ¥
  * @param:null
  * @return:null
  */
 void L610_SetAndConnect()
 {
 
-    //ÉèÖÃÆ½Ì¨Éè±¸ĞÅÏ¢ AT+TCDEVINFOSET=1,"Z2JKC5OLC7","smartCart","hvRtR5SpePhwDqL5nWDR2Q=="
+    //è®¾ç½®å¹³å°è®¾å¤‡ä¿¡æ¯ AT+TCDEVINFOSET=1,"Z2JKC5OLC7","smartCart","hvRtR5SpePhwDqL5nWDR2Q=="
     printf("AT+TCDEVINFOSET=1,\"Z2JKC5OLC7\",\"smartCart\",\"hvRtR5SpePhwDqL5nWDR2Q==\"\r\n");
     Delay_Ms(20);
     strx=strstr((const char*)USART_Rbuffer,(const char*)"+TCDEVINFOSET: OK");
     while(strx==NULL)
     {
-       printf("Æ½Ì¨ĞÅÏ¢ÉèÖÃÊ§°Ü\n");
+       printf("å¹³å°ä¿¡æ¯è®¾ç½®å¤±è´¥\n");
        Delay_Ms(1000);
        USART_Rbuffer_Num = 0;
        printf("AT+TCDEVINFOSET=1,\"Z2JKC5OLC7\",\"smartCart\",\"hvRtR5SpePhwDqL5nWDR2Q==\"\r\n");
        Delay_Ms(1000);
        strx=strstr((const char*)USART_Rbuffer,(const char*)"+TCDEVINFOSET: OK");
     }
-    printf("Æ½Ì¨ĞÅÏ¢ÉèÖÃ³É¹¦\n");
+    printf("å¹³å°ä¿¡æ¯è®¾ç½®æˆåŠŸ\n");
     Delay_Ms(1000);
 
-    //ÉèÖÃÁ¬½Ó²ÎÊı²¢Á¬½Ó
+    //è®¾ç½®è¿æ¥å‚æ•°å¹¶è¿æ¥
     printf("AT+TCMQTTCONN=1,20000,240,1,1\r\n");
     Delay_Ms(50);
     strx=strstr((const char*)USART_Rbuffer,(const char*)"+TCMQTTCONN: OK");
     while(strx==NULL)
     {
-        strx=strstr((const char*)USART_Rbuffer,(const char*)"+CME ERROR: 4");//±¨Õâ¸ö´íÎóÊÇÒòÎªÖ®Ç°ÒÑ¾­Á¬½Ó¹ıÁË£¬¶Ï¿ªÖØĞÂÁ¬½ÓÒ»´Î¾Í¿ÉÒÔÁË
+        strx=strstr((const char*)USART_Rbuffer,(const char*)"+CME ERROR: 4");//æŠ¥è¿™ä¸ªé”™è¯¯æ˜¯å› ä¸ºä¹‹å‰å·²ç»è¿æ¥è¿‡äº†ï¼Œæ–­å¼€é‡æ–°è¿æ¥ä¸€æ¬¡å°±å¯ä»¥äº†
         if(strx==NULL)
         {
-            printf("Á¬½ÓÊ§°Ü\n");
+            printf("è¿æ¥å¤±è´¥\n");
             Delay_Ms(2000);
             USART_Rbuffer_Num = 0;
             printf("AT+TCMQTTCONN=1,20000,240,1,1\r\n");
@@ -156,75 +156,75 @@ void L610_SetAndConnect()
 
         }
     }
-    printf("Á¬½Ó³É¹¦\n");
+    printf("è¿æ¥æˆåŠŸ\n");
     Delay_Ms(1000);
 
 }
 
 /*
- * @brief:FibocomL610¶©ÔÄÉÏ±¨ÏÂĞĞÊôĞÔ
+ * @brief:FibocomL610è®¢é˜…ä¸ŠæŠ¥ä¸‹è¡Œå±æ€§
  * @param:null
  * @return:null
  */
 void L610_Sub()
 {
 
-    //¶©ÔÄÉÏ±¨ÏÂĞĞÊôĞÔ AT+TCMQTTSUB="$thing/down/property/Z2JKC5OLC7/smartCart",1
+    //è®¢é˜…ä¸ŠæŠ¥ä¸‹è¡Œå±æ€§ AT+TCMQTTSUB="$thing/down/property/Z2JKC5OLC7/smartCart",1
     printf("AT+TCMQTTSUB=\"$thing/down/property/Z2JKC5OLC7/smartCart\",1\r\n");
     Delay_Ms(50);
     strx=strstr((const char*)USART_Rbuffer,(const char*)"+TCMQTTSUB: OK");
     while(strx==NULL)
     {
-       printf("¶©ÔÄ±êÇ©Ê§°Ü\n");
+       printf("è®¢é˜…æ ‡ç­¾å¤±è´¥\n");
        Delay_Ms(1000);
        USART_Rbuffer_Num = 0;
        printf("AT+TCMQTTSUB=\"$thing/down/property/Z2JKC5OLC7/smartCart\",1\r\n");
        Delay_Ms(1000);
        strx=strstr((const char*)USART_Rbuffer,(const char*)"+TCMQTTSUB: OK");
     }
-    printf("¶©ÔÄ±êÇ©³É¹¦\n");
+    printf("è®¢é˜…æ ‡ç­¾æˆåŠŸ\n");
     Delay_Ms(1000);
 
 }
 
 /*
- * @brief:FibocomL610ÉÏ±¨
- * @param:productID:ÉÌÆ·ÌõÂëID
+ * @brief:FibocomL610ä¸ŠæŠ¥
+ * @param:productID:å•†å“æ¡ç ID
  * @return:NULL
  */
 void L610_Pub(const char* productID,const char* AddorDelete)
 {
-    //ÉÏ±¨ÊôĞÔ AT+TCMQTTPUB="$thing/up/property/Z2JKC5OLC7/smartCart",1,"{\"method\":\"report\",\"clientToken\":\"123\",\"params\":{\"productID\":345}}"
+    //ä¸ŠæŠ¥å±æ€§ AT+TCMQTTPUB="$thing/up/property/Z2JKC5OLC7/smartCart",1,"{\"method\":\"report\",\"clientToken\":\"123\",\"params\":{\"productID\":345}}"
     printf("AT+TCMQTTPUB=\"$thing/up/property/Z2JKC5OLC7/smartCart\",1,\"{\\\"method\\\":\\\"report\\\",\\\"clientToken\\\":\\\"123\\\",\\\"params\\\":{\\\"productID\\\":\\\"%s\\\",\\\"AddorDelete\\\":\\\"%s\\\"}}\"\r\n",productID,AddorDelete);
 //    Delay_Ms(600);
-//    strx=strstr((const char*)USART_Rbuffer,(const char*)"thing");//ÉÏ±¨»ØÀ¡·µ»ØµÄÌ«¿ì£¬×¥²»×¡¡±OK¡°£¬ËùÒÔ¸É´àÌôÒ»¸ö¿¿ºóÒ»µãµÄĞÅÏ¢×÷Îª³É¹¦µÄ±êÖ¾
+//    strx=strstr((const char*)USART_Rbuffer,(const char*)"thing");//ä¸ŠæŠ¥å›é¦ˆè¿”å›çš„å¤ªå¿«ï¼ŒæŠ“ä¸ä½â€OKâ€œï¼Œæ‰€ä»¥å¹²è„†æŒ‘ä¸€ä¸ªé åä¸€ç‚¹çš„ä¿¡æ¯ä½œä¸ºæˆåŠŸçš„æ ‡å¿—
 //    while(strx==NULL)
 //    {
-//       printf("ÉÏ±¨Ê§°Ü\n");
+//       printf("ä¸ŠæŠ¥å¤±è´¥\n");
 //       Delay_Ms(1000);
 //       USART_Rbuffer_Num = 0;
 //       printf("AT+TCMQTTPUB=\"$thing/up/property/Z2JKC5OLC7/smartCart\",1,\"{\\\"method\\\":\\\"report\\\",\\\"clientToken\\\":\\\"123\\\",\\\"params\\\":{\\\"productID\\\":\\\"%s\\\",\\\"AddorDelete\\\":\\\"%s\\\"}}\"\r\n",productID,AddorDelete);
 //       Delay_Ms(1000);
 //       strx=strstr((const char*)USART_Rbuffer,(const char*)"thing");
 //    }
-    //printf("ÉÏ±¨³É¹¦\n");
+    //printf("ä¸ŠæŠ¥æˆåŠŸ\n");
     //Delay_Ms(100);
 //    USART_Rbuffer_Num = 0;
 //    memset(USART_Rbuffer, 0, sizeof(USART_Rbuffer));
 }
 
 /*
- * @brief:FibocomL610½ÓÊÕ
+ * @brief:FibocomL610æ¥æ”¶
  * @param:NULL
- * @return:const ProductInfo productInfo£ºÊÕµ½µÄ²úÆ·ĞÅÏ¢
+ * @return:const ProductInfo productInfoï¼šæ”¶åˆ°çš„äº§å“ä¿¡æ¯
  */
 ProductInfo L610_Recive()
 {
-    ProductInfo productInfo; // ±£´æÉÌÆ·ĞÅÏ¢µÄ¾Ö²¿±äÁ¿
+    ProductInfo productInfo; // ä¿å­˜å•†å“ä¿¡æ¯çš„å±€éƒ¨å˜é‡
     char* strx;
     char* endptr;
 
-    // ³õÊ¼»¯
+    // åˆå§‹åŒ–
 //    memset(&productInfo, 0, sizeof(ProductInfo));
 //    USART_Rbuffer_Num = 0;
 //    memset(USART_Rbuffer, 0, sizeof(USART_Rbuffer));
@@ -235,97 +235,97 @@ ProductInfo L610_Recive()
         {
             Delay_Ms(200);
 
-            // ²éÕÒ productID
+            // æŸ¥æ‰¾ productID
             strx = strstr((const char*)USART_Rbuffer, "ID");
             if (strx == NULL)
             {
-                //printf("ÉÌÆ·IDÊôĞÔ»ñÈ¡Ê§°Ü\n");
+                //printf("å•†å“IDå±æ€§è·å–å¤±è´¥\n");
             }
             else
             {
                 int i = 0;
-                strx += strlen("ID") + 3; // ÒÆ¶¯µ½ productID µÄÖµµÄÎ»ÖÃ
+                strx += strlen("ID") + 3; // ç§»åŠ¨åˆ° productID çš„å€¼çš„ä½ç½®
                 while (*strx != '\"' && i < MAX_STRING_LENGTH)
                 {
-                    productInfo.productID[i++] = *strx++; // Öğ×Ö·û¸´ÖÆ productID
+                    productInfo.productID[i++] = *strx++; // é€å­—ç¬¦å¤åˆ¶ productID
                 }
-                productInfo.productID[i] = '\0'; // Ìí¼Ó×Ö·û´®½áÊø·û
-                //printf("ÉÌÆ·IDÊôĞÔ»ñÈ¡³É¹¦\n");
+                productInfo.productID[i] = '\0'; // æ·»åŠ å­—ç¬¦ä¸²ç»“æŸç¬¦
+                //printf("å•†å“IDå±æ€§è·å–æˆåŠŸ\n");
                 //Delay_Ms(500);
-                printf("ÊÕµ½ĞÅÏ¢£ºproductID=%s\n", productInfo.productID);
+                printf("æ”¶åˆ°ä¿¡æ¯ï¼šproductID=%s\n", productInfo.productID);
                 //Delay_Ms(500);
             }
 
-            // ²éÕÒ productName
+            // æŸ¥æ‰¾ productName
             strx = strstr((const char*)USART_Rbuffer, "Name");
             if (strx == NULL)
             {
-                //printf("ÉÌÆ·NameÊôĞÔ»ñÈ¡Ê§°Ü\n");
+                //printf("å•†å“Nameå±æ€§è·å–å¤±è´¥\n");
             }
             else
             {
                 int i = 0;
-                strx += strlen("Name") + 3; // ÒÆ¶¯µ½ productName µÄÖµµÄÎ»ÖÃ
+                strx += strlen("Name") + 3; // ç§»åŠ¨åˆ° productName çš„å€¼çš„ä½ç½®
                 while (*strx != '\"' && i < MAX_STRING_LENGTH)
                 {
-                    productInfo.productName[i++] = *strx++; // Öğ×Ö·û¸´ÖÆ productName
+                    productInfo.productName[i++] = *strx++; // é€å­—ç¬¦å¤åˆ¶ productName
                 }
-                productInfo.productName[i] = '\0'; // Ìí¼Ó×Ö·û´®½áÊø·û
-                //printf("ÉÌÆ·NameÊôĞÔ»ñÈ¡³É¹¦\n");
+                productInfo.productName[i] = '\0'; // æ·»åŠ å­—ç¬¦ä¸²ç»“æŸç¬¦
+                //printf("å•†å“Nameå±æ€§è·å–æˆåŠŸ\n");
                 //Delay_Ms(500);
-                printf("ÊÕµ½ĞÅÏ¢£ºproductName=%s\n", productInfo.productName);
+                printf("æ”¶åˆ°ä¿¡æ¯ï¼šproductName=%s\n", productInfo.productName);
                 //Delay_Ms(500);
             }
 
-            // ²éÕÒ productPrice
+            // æŸ¥æ‰¾ productPrice
             strx = strstr((const char*)USART_Rbuffer, "Price");
             if (strx == NULL)
             {
-                //printf("ÉÌÆ·PriceÊôĞÔ»ñÈ¡Ê§°Ü\n");
+                //printf("å•†å“Priceå±æ€§è·å–å¤±è´¥\n");
             }
             else
             {
                 int i = 0;
-                strx += strlen("Price") + 3; // ÒÆ¶¯µ½ productPrice µÄÖµµÄÎ»ÖÃ
+                strx += strlen("Price") + 3; // ç§»åŠ¨åˆ° productPrice çš„å€¼çš„ä½ç½®
                 while (*strx != ',' && *strx != '\"' && i < MAX_STRING_LENGTH)
                 {
-                    productInfo.productPriceStr[i++] = *strx++; // Öğ×Ö·û¸´ÖÆ productPriceStr
+                    productInfo.productPriceStr[i++] = *strx++; // é€å­—ç¬¦å¤åˆ¶ productPriceStr
                 }
-                productInfo.productPriceStr[i] = '\0'; // Ìí¼Ó×Ö·û´®½áÊø·û
-                //printf("ÉÌÆ·PriceÊôĞÔ»ñÈ¡³É¹¦\n");
+                productInfo.productPriceStr[i] = '\0'; // æ·»åŠ å­—ç¬¦ä¸²ç»“æŸç¬¦
+                //printf("å•†å“Priceå±æ€§è·å–æˆåŠŸ\n");
                 productInfo.productPrice = strtof(productInfo.productPriceStr, &endptr);
                 //Delay_Ms(500);
-                printf("ÊÕµ½ĞÅÏ¢£ºproductPriceStr=%s\n", productInfo.productPriceStr);
+                printf("æ”¶åˆ°ä¿¡æ¯ï¼šproductPriceStr=%s\n", productInfo.productPriceStr);
                 //Delay_Ms(500);
             }
 
-            // ²éÕÒ productWeight
+            // æŸ¥æ‰¾ productWeight
             strx = strstr((const char*)USART_Rbuffer, "Weight");
             if (strx == NULL)
             {
-                //printf("ÉÌÆ·WeightÊôĞÔ»ñÈ¡Ê§°Ü\n");
+                //printf("å•†å“Weightå±æ€§è·å–å¤±è´¥\n");
             }
             else
             {
                 int i = 0;
-                strx += strlen("Weight") + 3; // ÒÆ¶¯µ½ productWeight µÄÖµµÄÎ»ÖÃ
+                strx += strlen("Weight") + 3; // ç§»åŠ¨åˆ° productWeight çš„å€¼çš„ä½ç½®
                 while (*strx != ',' && *strx != '\"' && i < MAX_STRING_LENGTH)
                 {
-                    productInfo.productWeightStr[i++] = *strx++; // Öğ×Ö·û¸´ÖÆ productWeightStr
+                    productInfo.productWeightStr[i++] = *strx++; // é€å­—ç¬¦å¤åˆ¶ productWeightStr
                 }
-                productInfo.productWeightStr[i] = '\0'; // Ìí¼Ó×Ö·û´®½áÊø·û
-                //printf("ÉÌÆ·WeightÊôĞÔ»ñÈ¡³É¹¦\n");
+                productInfo.productWeightStr[i] = '\0'; // æ·»åŠ å­—ç¬¦ä¸²ç»“æŸç¬¦
+                //printf("å•†å“Weightå±æ€§è·å–æˆåŠŸ\n");
                 productInfo.productWeight = strtof(productInfo.productWeightStr, &endptr);
                 //Delay_Ms(500);
-                printf("ÊÕµ½ĞÅÏ¢£ºproductWeightStr=%s\n", productInfo.productWeightStr);
+                printf("æ”¶åˆ°ä¿¡æ¯ï¼šproductWeightStr=%s\n", productInfo.productWeightStr);
                 //Delay_Ms(500);
             }
 
-            // ÖØÖÃ»º³åÇø
+            // é‡ç½®ç¼“å†²åŒº
             USART_Rbuffer_Num = 0;
             memset(USART_Rbuffer, 0, sizeof(USART_Rbuffer));
 
-            // ½âÎöÍêËùÓĞÊôĞÔºó·µ»Ø
+            // è§£æå®Œæ‰€æœ‰å±æ€§åè¿”å›
             return productInfo;
         }
         Delay_Ms(500);

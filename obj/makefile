@@ -54,7 +54,7 @@ all: successVersion.elf secondary-outputs
 
 # 工具调用
 successVersion.elf: $(OBJS) $(USER_OBJS)
-	@	@	riscv-none-embed-gcc -march=rv32imac -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -Os -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wunused -Wuninitialized  -g -T "F:\0706Version\successVersion\Ld\Link.ld" -nostartfiles -Xlinker --gc-sections -Wl,-Map,"successVersion.map" --specs=nano.specs --specs=nosys.specs -o "successVersion.elf" $(OBJS) $(USER_OBJS) $(LIBS)
+	@	@	riscv-none-embed-gcc -march=rv32imac -mabi=ilp32 -msmall-data-limit=8 -mno-save-restore -Os -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -Wunused -Wuninitialized  -g -T "D:\SmartCart\Ld\Link.ld" -nostartfiles -Xlinker --gc-sections -Wl,-Map,"successVersion.map" --specs=nano.specs --specs=nosys.specs -o "successVersion.elf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@	@
 successVersion.hex: successVersion.elf
 	@	riscv-none-embed-objcopy -O ihex "successVersion.elf"  "successVersion.hex"

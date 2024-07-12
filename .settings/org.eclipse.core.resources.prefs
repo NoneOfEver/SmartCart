@@ -1,2 +1,7 @@
 eclipse.preferences.version=1
+encoding//Hardware/exit.c=UTF-8
+encoding//Hardware/exit.h=UTF-8
+encoding//User/L610.c=UTF-8
+encoding//User/lcd.c=UTF-8
 encoding//User/main.c=UTF-8
+encoding//User/pages.c=UTF-8

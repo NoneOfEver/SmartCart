@@ -1,114 +1,107 @@
 Hardware/usart.o: ../Hardware/usart.c ../Hardware/usart.h \
- F:\0706Version\successVersion\Peripheral\inc/ch32v30x.h \
- F:\0706Version\successVersion\Core/core_riscv.h \
- F:\0706Version\successVersion\User/system_ch32v30x.h \
- F:\0706Version\successVersion\User/ch32v30x_conf.h \
- F:\0706Version\successVersion\Peripheral\inc/ch32v30x_adc.h \
- F:\0706Version\successVersion\Peripheral\inc/ch32v30x.h \
- F:\0706Version\successVersion\Peripheral\inc/ch32v30x_bkp.h \
- F:\0706Version\successVersion\Peripheral\inc/ch32v30x_can.h \
- F:\0706Version\successVersion\Peripheral\inc/ch32v30x_crc.h \
- F:\0706Version\successVersion\Peripheral\inc/ch32v30x_dac.h \
- F:\0706Version\successVersion\Peripheral\inc/ch32v30x_dbgmcu.h \
- F:\0706Version\successVersion\Peripheral\inc/ch32v30x_dma.h \
- F:\0706Version\successVersion\Peripheral\inc/ch32v30x_exti.h \
- F:\0706Version\successVersion\Peripheral\inc/ch32v30x_flash.h \
- F:\0706Version\successVersion\Peripheral\inc/ch32v30x_fsmc.h \
- F:\0706Version\successVersion\Peripheral\inc/ch32v30x_gpio.h \
- F:\0706Version\successVersion\Peripheral\inc/ch32v30x_i2c.h \
- F:\0706Version\successVersion\Peripheral\inc/ch32v30x_iwdg.h \
- F:\0706Version\successVersion\Peripheral\inc/ch32v30x_pwr.h \
- F:\0706Version\successVersion\Peripheral\inc/ch32v30x_rcc.h \
- F:\0706Version\successVersion\Peripheral\inc/ch32v30x_rtc.h \
- F:\0706Version\successVersion\Peripheral\inc/ch32v30x_sdio.h \
- F:\0706Version\successVersion\Peripheral\inc/ch32v30x_spi.h \
- F:\0706Version\successVersion\Peripheral\inc/ch32v30x_tim.h \
- F:\0706Version\successVersion\Peripheral\inc/ch32v30x_usart.h \
- F:\0706Version\successVersion\Peripheral\inc/ch32v30x_wwdg.h \
- F:\0706Version\successVersion\User/ch32v30x_it.h \
- F:\0706Version\successVersion\Debug/debug.h \
- F:\0706Version\successVersion\Peripheral\inc/ch32v30x_misc.h \
- F:\0706Version\successVersion\User/pages.h \
- F:\0706Version\successVersion\User/L610.h \
- F:\0706Version\successVersion\Hardware/usart.h \
- F:\0706Version\successVersion\User/structures.h \
- F:\0706Version\successVersion\User/lcd.h \
- F:\0706Version\successVersion\User/HX77.h \
- F:\0706Version\successVersion\User/system_ch32v30x.h \
- F:\0706Version\successVersion\User/sys.h
+ D:\SmartCart\Peripheral\inc/ch32v30x.h D:\SmartCart\Core/core_riscv.h \
+ D:\SmartCart\User/system_ch32v30x.h D:\SmartCart\User/ch32v30x_conf.h \
+ D:\SmartCart\Peripheral\inc/ch32v30x_adc.h \
+ D:\SmartCart\Peripheral\inc/ch32v30x.h \
+ D:\SmartCart\Peripheral\inc/ch32v30x_bkp.h \
+ D:\SmartCart\Peripheral\inc/ch32v30x_can.h \
+ D:\SmartCart\Peripheral\inc/ch32v30x_crc.h \
+ D:\SmartCart\Peripheral\inc/ch32v30x_dac.h \
+ D:\SmartCart\Peripheral\inc/ch32v30x_dbgmcu.h \
+ D:\SmartCart\Peripheral\inc/ch32v30x_dma.h \
+ D:\SmartCart\Peripheral\inc/ch32v30x_exti.h \
+ D:\SmartCart\Peripheral\inc/ch32v30x_flash.h \
+ D:\SmartCart\Peripheral\inc/ch32v30x_fsmc.h \
+ D:\SmartCart\Peripheral\inc/ch32v30x_gpio.h \
+ D:\SmartCart\Peripheral\inc/ch32v30x_i2c.h \
+ D:\SmartCart\Peripheral\inc/ch32v30x_iwdg.h \
+ D:\SmartCart\Peripheral\inc/ch32v30x_pwr.h \
+ D:\SmartCart\Peripheral\inc/ch32v30x_rcc.h \
+ D:\SmartCart\Peripheral\inc/ch32v30x_rtc.h \
+ D:\SmartCart\Peripheral\inc/ch32v30x_sdio.h \
+ D:\SmartCart\Peripheral\inc/ch32v30x_spi.h \
+ D:\SmartCart\Peripheral\inc/ch32v30x_tim.h \
+ D:\SmartCart\Peripheral\inc/ch32v30x_usart.h \
+ D:\SmartCart\Peripheral\inc/ch32v30x_wwdg.h \
+ D:\SmartCart\User/ch32v30x_it.h D:\SmartCart\Debug/debug.h \
+ D:\SmartCart\Peripheral\inc/ch32v30x_misc.h D:\SmartCart\User/pages.h \
+ D:\SmartCart\User/L610.h D:\SmartCart\Hardware/usart.h \
+ D:\SmartCart\User/structures.h D:\SmartCart\User/lcd.h \
+ D:\SmartCart\User/HX77.h D:\SmartCart\User/system_ch32v30x.h \
+ D:\SmartCart\User/sys.h
 
 ../Hardware/usart.h:
 
-F:\0706Version\successVersion\Peripheral\inc/ch32v30x.h:
+D:\SmartCart\Peripheral\inc/ch32v30x.h:
 
-F:\0706Version\successVersion\Core/core_riscv.h:
+D:\SmartCart\Core/core_riscv.h:
 
-F:\0706Version\successVersion\User/system_ch32v30x.h:
+D:\SmartCart\User/system_ch32v30x.h:
 
-F:\0706Version\successVersion\User/ch32v30x_conf.h:
+D:\SmartCart\User/ch32v30x_conf.h:
 
-F:\0706Version\successVersion\Peripheral\inc/ch32v30x_adc.h:
+D:\SmartCart\Peripheral\inc/ch32v30x_adc.h:
 
-F:\0706Version\successVersion\Peripheral\inc/ch32v30x.h:
+D:\SmartCart\Peripheral\inc/ch32v30x.h:
 
-F:\0706Version\successVersion\Peripheral\inc/ch32v30x_bkp.h:
+D:\SmartCart\Peripheral\inc/ch32v30x_bkp.h:
 
-F:\0706Version\successVersion\Peripheral\inc/ch32v30x_can.h:
+D:\SmartCart\Peripheral\inc/ch32v30x_can.h:
 
-F:\0706Version\successVersion\Peripheral\inc/ch32v30x_crc.h:
+D:\SmartCart\Peripheral\inc/ch32v30x_crc.h:
 
-F:\0706Version\successVersion\Peripheral\inc/ch32v30x_dac.h:
+D:\SmartCart\Peripheral\inc/ch32v30x_dac.h:
 
-F:\0706Version\successVersion\Peripheral\inc/ch32v30x_dbgmcu.h:
+D:\SmartCart\Peripheral\inc/ch32v30x_dbgmcu.h:
 
-F:\0706Version\successVersion\Peripheral\inc/ch32v30x_dma.h:
+D:\SmartCart\Peripheral\inc/ch32v30x_dma.h:
 
-F:\0706Version\successVersion\Peripheral\inc/ch32v30x_exti.h:
+D:\SmartCart\Peripheral\inc/ch32v30x_exti.h:
 
-F:\0706Version\successVersion\Peripheral\inc/ch32v30x_flash.h:
+D:\SmartCart\Peripheral\inc/ch32v30x_flash.h:
 
-F:\0706Version\successVersion\Peripheral\inc/ch32v30x_fsmc.h:
+D:\SmartCart\Peripheral\inc/ch32v30x_fsmc.h:
 
-F:\0706Version\successVersion\Peripheral\inc/ch32v30x_gpio.h:
+D:\SmartCart\Peripheral\inc/ch32v30x_gpio.h:
 
-F:\0706Version\successVersion\Peripheral\inc/ch32v30x_i2c.h:
+D:\SmartCart\Peripheral\inc/ch32v30x_i2c.h:
 
-F:\0706Version\successVersion\Peripheral\inc/ch32v30x_iwdg.h:
+D:\SmartCart\Peripheral\inc/ch32v30x_iwdg.h:
 
-F:\0706Version\successVersion\Peripheral\inc/ch32v30x_pwr.h:
+D:\SmartCart\Peripheral\inc/ch32v30x_pwr.h:
 
-F:\0706Version\successVersion\Peripheral\inc/ch32v30x_rcc.h:
+D:\SmartCart\Peripheral\inc/ch32v30x_rcc.h:
 
-F:\0706Version\successVersion\Peripheral\inc/ch32v30x_rtc.h:
+D:\SmartCart\Peripheral\inc/ch32v30x_rtc.h:
 
-F:\0706Version\successVersion\Peripheral\inc/ch32v30x_sdio.h:
+D:\SmartCart\Peripheral\inc/ch32v30x_sdio.h:
 
-F:\0706Version\successVersion\Peripheral\inc/ch32v30x_spi.h:
+D:\SmartCart\Peripheral\inc/ch32v30x_spi.h:
 
-F:\0706Version\successVersion\Peripheral\inc/ch32v30x_tim.h:
+D:\SmartCart\Peripheral\inc/ch32v30x_tim.h:
 
-F:\0706Version\successVersion\Peripheral\inc/ch32v30x_usart.h:
+D:\SmartCart\Peripheral\inc/ch32v30x_usart.h:
 
-F:\0706Version\successVersion\Peripheral\inc/ch32v30x_wwdg.h:
+D:\SmartCart\Peripheral\inc/ch32v30x_wwdg.h:
 
-F:\0706Version\successVersion\User/ch32v30x_it.h:
+D:\SmartCart\User/ch32v30x_it.h:
 
-F:\0706Version\successVersion\Debug/debug.h:
+D:\SmartCart\Debug/debug.h:
 
-F:\0706Version\successVersion\Peripheral\inc/ch32v30x_misc.h:
+D:\SmartCart\Peripheral\inc/ch32v30x_misc.h:
 
-F:\0706Version\successVersion\User/pages.h:
+D:\SmartCart\User/pages.h:
 
-F:\0706Version\successVersion\User/L610.h:
+D:\SmartCart\User/L610.h:
 
-F:\0706Version\successVersion\Hardware/usart.h:
+D:\SmartCart\Hardware/usart.h:
 
-F:\0706Version\successVersion\User/structures.h:
+D:\SmartCart\User/structures.h:
 
-F:\0706Version\successVersion\User/lcd.h:
+D:\SmartCart\User/lcd.h:
 
-F:\0706Version\successVersion\User/HX77.h:
+D:\SmartCart\User/HX77.h:
 
-F:\0706Version\successVersion\User/system_ch32v30x.h:
+D:\SmartCart\User/system_ch32v30x.h:
 
-F:\0706Version\successVersion\User/sys.h:
+D:\SmartCart\User/sys.h:
