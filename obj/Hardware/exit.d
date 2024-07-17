@@ -1,8 +1,8 @@
-Peripheral/src/ch32v30x_rcc.o: ../Peripheral/src/ch32v30x_rcc.c \
- D:\SmartCart\Peripheral\inc/ch32v30x_rcc.h \
+Hardware/exit.o: ../Hardware/exit.c D:\SmartCart\User/sys.h \
  D:\SmartCart\Peripheral\inc/ch32v30x.h D:\SmartCart\Core/core_riscv.h \
  D:\SmartCart\User/system_ch32v30x.h D:\SmartCart\User/ch32v30x_conf.h \
  D:\SmartCart\Peripheral\inc/ch32v30x_adc.h \
+ D:\SmartCart\Peripheral\inc/ch32v30x.h \
  D:\SmartCart\Peripheral\inc/ch32v30x_bkp.h \
  D:\SmartCart\Peripheral\inc/ch32v30x_can.h \
  D:\SmartCart\Peripheral\inc/ch32v30x_crc.h \
@@ -16,6 +16,7 @@ Peripheral/src/ch32v30x_rcc.o: ../Peripheral/src/ch32v30x_rcc.c \
  D:\SmartCart\Peripheral\inc/ch32v30x_i2c.h \
  D:\SmartCart\Peripheral\inc/ch32v30x_iwdg.h \
  D:\SmartCart\Peripheral\inc/ch32v30x_pwr.h \
+ D:\SmartCart\Peripheral\inc/ch32v30x_rcc.h \
  D:\SmartCart\Peripheral\inc/ch32v30x_rtc.h \
  D:\SmartCart\Peripheral\inc/ch32v30x_sdio.h \
  D:\SmartCart\Peripheral\inc/ch32v30x_spi.h \
@@ -23,10 +24,10 @@ Peripheral/src/ch32v30x_rcc.o: ../Peripheral/src/ch32v30x_rcc.c \
  D:\SmartCart\Peripheral\inc/ch32v30x_usart.h \
  D:\SmartCart\Peripheral\inc/ch32v30x_wwdg.h \
  D:\SmartCart\User/ch32v30x_it.h D:\SmartCart\Debug/debug.h \
- D:\SmartCart\Peripheral\inc/ch32v30x.h \
- D:\SmartCart\Peripheral\inc/ch32v30x_misc.h
+ D:\SmartCart\Peripheral\inc/ch32v30x_misc.h ../Hardware/exit.h \
+ D:\SmartCart\User/Key_Get.h
 
-D:\SmartCart\Peripheral\inc/ch32v30x_rcc.h:
+D:\SmartCart\User/sys.h:
 
 D:\SmartCart\Peripheral\inc/ch32v30x.h:
 
@@ -37,6 +38,8 @@ D:\SmartCart\User/system_ch32v30x.h:
 D:\SmartCart\User/ch32v30x_conf.h:
 
 D:\SmartCart\Peripheral\inc/ch32v30x_adc.h:
+
+D:\SmartCart\Peripheral\inc/ch32v30x.h:
 
 D:\SmartCart\Peripheral\inc/ch32v30x_bkp.h:
 
@@ -64,6 +67,8 @@ D:\SmartCart\Peripheral\inc/ch32v30x_iwdg.h:
 
 D:\SmartCart\Peripheral\inc/ch32v30x_pwr.h:
 
+D:\SmartCart\Peripheral\inc/ch32v30x_rcc.h:
+
 D:\SmartCart\Peripheral\inc/ch32v30x_rtc.h:
 
 D:\SmartCart\Peripheral\inc/ch32v30x_sdio.h:
@@ -80,6 +85,8 @@ D:\SmartCart\User/ch32v30x_it.h:
 
 D:\SmartCart\Debug/debug.h:
 
-D:\SmartCart\Peripheral\inc/ch32v30x.h:
-
 D:\SmartCart\Peripheral\inc/ch32v30x_misc.h:
+
+../Hardware/exit.h:
+
+D:\SmartCart\User/Key_Get.h:

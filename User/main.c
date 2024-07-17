@@ -28,7 +28,7 @@
 #define test
 #define GapValue 270
 float   BiaoDing=500.7;       //标定系数,根据自己的传感器调节
-
+#include"exit.h"
    
 
 /*********************************************************************
@@ -44,7 +44,7 @@ int main(void)
     SystemCoreClockUpdate();
 	Delay_Init();
     USARTx_Init();  
-         
+    extix_init();
     LCD_Reset_GPIO_Init();
     //LCD reset
 
@@ -74,15 +74,15 @@ int main(void)
 
     Delay_Ms(1);
     //初始化按键·······这里可能需要一个延时
-    Key_Init();
+    //extix_init();
     uint32_t pi=HX711_ReadData();
     
     while(1)
     {
-        Key_Num=0;
+        int Key_Num;
         Key_Num=Key_GetNum();
-
-        if(Key_Num==1)
+        
+        if(Key_Num==5)
         {
             Pages_add();
             USART_Cmd(USART1,ENABLE);
@@ -151,24 +151,15 @@ int main(void)
         if(Key_Num==3)
         {
             Pages_Pay();
-            Key_Num=0;
-            if(Key_Num==3)
-            {
-                renderMainPage();
-            }
-
+           
         }
 
         if(Key_Num==4)
         {
             renderCurrentProductsPage(&productList);
-            if(Key_Num==3)
-            {
-                renderMainPage();
-            }
-
+            
         }
-        if(Key_Num==5)
+        if(Key_Num==1)
         {
             renderMainPage();
         }
