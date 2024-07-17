@@ -44,7 +44,7 @@ int main(void)
     SystemCoreClockUpdate();
 	Delay_Init();
     USARTx_Init();  
-         
+    extix_init();
     LCD_Reset_GPIO_Init();
     //LCD reset
 
@@ -74,14 +74,15 @@ int main(void)
 
     Delay_Ms(1);
     //初始化按键·······这里可能需要一个延时
-    extix_init();
+    //extix_init();
     uint32_t pi=HX711_ReadData();
     
     while(1)
     {
+        int Key_Num;
+        Key_Num=Key_GetNum();
         
-
-        if(key_Num==1)
+        if(Key_Num==5)
         {
             Pages_add();
             USART_Cmd(USART1,ENABLE);
@@ -113,7 +114,7 @@ int main(void)
                 recv_ok=0;
             }
         }
-        if(key_Num==2)
+        if(Key_Num==2)
         {
             Pages_delete();
             USART_Cmd(USART1,ENABLE);
@@ -147,18 +148,18 @@ int main(void)
             }
 
         }
-        if(key_Num==3)
+        if(Key_Num==3)
         {
             Pages_Pay();
            
         }
 
-        if(key_Num==4)
+        if(Key_Num==4)
         {
             renderCurrentProductsPage(&productList);
             
         }
-        if(key_Num==5)
+        if(Key_Num==1)
         {
             renderMainPage();
         }

@@ -210,4 +210,5 @@ void Pages_error()
     LCD_ShowString(200, 180, 13*BIGCHAR, 32, 32,"weight error!");
     Delay_Ms(4000);
     renderMainPage();
+    
 }

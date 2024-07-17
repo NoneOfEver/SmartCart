@@ -4,7 +4,7 @@
  *  Created on: 2024年5月28日
  *      Author: 宋元
  */
-#include"debug.h"
+#include "debug.h"
 #include"Key_Get.h"
 volatile uint8_t Key_Num=0;
 void Key_Init(void)
@@ -28,7 +28,7 @@ uint8_t Key_GetNum()
             Delay_Ms(20);
             while (GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_4) == 0);
             Delay_Ms(20);
-            Key_Num = 1;
+            Key_Num = 5;
        }
 
     if (GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_5) == 0)
@@ -57,7 +57,7 @@ uint8_t Key_GetNum()
             Delay_Ms(20);
             while (GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_11) == 0);
             Delay_Ms(20);
-            Key_Num = 5;
+            Key_Num = 1;
         }
     if (GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_12) == 0)
         {

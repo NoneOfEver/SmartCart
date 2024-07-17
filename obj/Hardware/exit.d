@@ -24,7 +24,8 @@ Hardware/exit.o: ../Hardware/exit.c D:\SmartCart\User/sys.h \
  D:\SmartCart\Peripheral\inc/ch32v30x_usart.h \
  D:\SmartCart\Peripheral\inc/ch32v30x_wwdg.h \
  D:\SmartCart\User/ch32v30x_it.h D:\SmartCart\Debug/debug.h \
- D:\SmartCart\Peripheral\inc/ch32v30x_misc.h ../Hardware/exit.h
+ D:\SmartCart\Peripheral\inc/ch32v30x_misc.h ../Hardware/exit.h \
+ D:\SmartCart\User/Key_Get.h
 
 D:\SmartCart\User/sys.h:
 
@@ -87,3 +88,5 @@ D:\SmartCart\Debug/debug.h:
 D:\SmartCart\Peripheral\inc/ch32v30x_misc.h:
 
 ../Hardware/exit.h:
+
+D:\SmartCart\User/Key_Get.h:
